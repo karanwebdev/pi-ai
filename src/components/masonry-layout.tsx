@@ -1,12 +1,11 @@
+import { Tile } from "@/app/types/tile";
+import { useChatStore } from "@/store/chat-store";
 import Image from "next/image";
 import React from "react";
 
-interface Tile {
-  title: string;
-  image: string;
-}
-
 const MasonryLayout: React.FC<{ tiles: Tile[] }> = ({ tiles }) => {
+  const populateFromTile = useChatStore((state) => state.populateFromTile);
+
   return (
     <div
       className="grid grid-cols-2 gap-4 sm:grid-cols-4 lg:grid-cols-2"
@@ -36,9 +35,16 @@ const MasonryLayout: React.FC<{ tiles: Tile[] }> = ({ tiles }) => {
             break;
         }
 
+        const handleTileClick = () => {
+          if (tile.blocks && tile.blocks.length > 0) {
+            populateFromTile(tile);
+          }
+        };
+
         return (
           <button
             key={index}
+            onClick={handleTileClick}
             className={`${colSpan} cursor-pointer group/card relative flex h-full w-full overflow-hidden rounded-20 border border-white text-left shadow-card transition-all duration-150 hover:scale-95 ${
               isLongTile
                 ? "bg-neutral-50 hover:bg-neutral-50-hover flex-row-reverse items-end p-3"

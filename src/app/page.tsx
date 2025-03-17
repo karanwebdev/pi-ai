@@ -3,38 +3,27 @@
 import ChatInterface from "@/components/chat-interface";
 import DiscoverSection from "@/components/discover-section";
 import Sidebar from "@/components/sidebar";
-import { useState } from "react";
+import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
 
 export default function Home() {
   const [activeView, setActiveView] = useState<
     "discover" | "threads" | "profile"
   >("discover");
   const [isViewCollapsed, setIsViewCollapsed] = useState(false);
-  const [messages, setMessages] = useState<
-    Array<{ role: "user" | "assistant"; content: string }>
-  >([
-    {
-      role: "assistant",
-      content:
-        "Hey there, great to meet you. I'm your personal AI. My goal is to be useful, friendly and fun. Ask me for advice, for answers, or let's talk about whatever's on your mind. How's your day going?",
-    },
-  ]);
+  const router = useRouter();
 
-  const handleSendMessage = (message: string) => {
-    setMessages([...messages, { role: "user", content: message }]);
+  useEffect(() => {
+    // Check if user has visited before
+    const hasVisited = localStorage.getItem("hasVisited");
 
-    // Simulate AI response
-    setTimeout(() => {
-      setMessages((prev) => [
-        ...prev,
-        {
-          role: "assistant",
-          content:
-            "You're welcome! And hey, if you need anything else, you can always chat with me for a while. I don't mind 😊",
-        },
-      ]);
-    }, 1000);
-  };
+    if (!hasVisited) {
+      // Set the flag for future visits
+      localStorage.setItem("hasVisited", "true");
+      // Redirect to onboarding
+      router.push("/onboarding");
+    }
+  }, [router]);
 
   const toggleView = (view: "discover" | "threads" | "profile") => {
     if (activeView === view) {
@@ -46,7 +35,7 @@ export default function Home() {
   };
 
   return (
-    <div className="flex h-screen bg-neutral-50">
+    <div className="flex h-screen bg-neutral-50 no-scrollbar">
       <Sidebar activeView={activeView} toggleView={toggleView} />
       <main className="flex-1 flex">
         {!isViewCollapsed && (
@@ -94,7 +83,7 @@ export default function Home() {
             )}
           </div>
         )}
-        <ChatInterface messages={messages} onSendMessage={handleSendMessage} />
+        <ChatInterface />
       </main>
     </div>
   );

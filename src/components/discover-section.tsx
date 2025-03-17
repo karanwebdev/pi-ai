@@ -1,15 +1,17 @@
+import { Tile } from "@/app/types/tile";
 import Image from "next/image";
 import Link from "next/link";
 import MasonryLayout from "./masonry-layout";
 
-const tiles = [
-  { title: "The psychology of colors", image: "/images/discover/1.webp" },
+export const tiles: Tile[] = [
   {
-    title: "The real meaning behind your dreams",
-    image: "/images/discover/2.webp",
+    id: "colors",
+    title: "The psychology of colors",
+    image: "/images/discover/1.webp",
+    relatedTiles: ["dreams", "perspective"],
   },
-  { title: "Let me translate something", image: "/images/discover/3.webp" },
   {
+    id: "health-wellness",
     title: "Health and wellness trends of 2024",
     image: "/images/discover/4.webp",
     blocks: [
@@ -42,63 +44,143 @@ const tiles = [
       {
         type: "text",
         content:
-          "Are there any areas of healthy living you’d like to talk about more?",
+          "Are there any areas of healthy living you'd like to talk about more?",
       },
     ],
     references: [],
+    relatedTiles: ["gut-health", "sleep-environment", "insomnia"],
   },
-  { title: "Learn about something new", image: "/images/discover/5.webp" },
-  { title: "Brainstorm ideas", image: "/images/discover/6.webp" },
-  { title: "Shift your perspective", image: "/images/discover/7.webp" },
-  { title: "Can you answer these riddles?", image: "/images/discover/8.webp" },
-  { title: "Learn a new language with Pi", image: "/images/discover/9.webp" },
-  { title: "Have an energy boost on me", image: "/images/discover/10.webp" },
   {
+    id: "dreams",
+    title: "The real meaning behind your dreams",
+    image: "/images/discover/2.webp",
+    relatedTiles: ["colors", "perspective"],
+  },
+  {
+    id: "translate",
+    title: "Let me translate something",
+    image: "/images/discover/3.webp",
+    relatedTiles: ["language", "science"],
+  },
+  {
+    id: "learn-new",
+    title: "Learn about something new",
+    image: "/images/discover/5.webp",
+    relatedTiles: ["science", "tech-trends", "fascinating-facts"],
+  },
+  {
+    id: "brainstorm",
+    title: "Brainstorm ideas",
+    image: "/images/discover/6.webp",
+    relatedTiles: ["perspective", "manifest"],
+  },
+  {
+    id: "perspective",
+    title: "Shift your perspective",
+    image: "/images/discover/7.webp",
+    relatedTiles: ["brainstorm", "imposter-syndrome"],
+  },
+  {
+    id: "riddles",
+    title: "Can you answer these riddles?",
+    image: "/images/discover/8.webp",
+    relatedTiles: ["fascinating-facts"],
+  },
+  {
+    id: "language",
+    title: "Learn a new language with Pi",
+    image: "/images/discover/9.webp",
+    relatedTiles: ["translate"],
+  },
+  {
+    id: "energy",
+    title: "Have an energy boost on me",
+    image: "/images/discover/10.webp",
+    relatedTiles: ["health-wellness"],
+  },
+  {
+    id: "attachment-style",
     title: "Learn your relationship attachment style",
     image: "/images/discover/11.webp",
+    relatedTiles: ["love-language", "criticism"],
   },
   {
+    id: "sleep-environment",
     title: "Perfect your sleeping environment",
     image: "/images/discover/12.webp",
+    relatedTiles: ["insomnia", "health-wellness"],
   },
   {
+    id: "love-language",
     title: "Quiz: what's my love language?",
     image: "/images/discover/13.webp",
+    relatedTiles: ["attachment-style"],
   },
-  { title: "How to deal with criticism", image: "/images/discover/14.webp" },
-  { title: "Get to inbox zero", image: "/images/discover/15.webp" },
-  { title: "Inspiring TED talks for you", image: "/images/discover/16.webp" },
   {
+    id: "criticism",
+    title: "How to deal with criticism",
+    image: "/images/discover/14.webp",
+    relatedTiles: ["difficult-feedback", "imposter-syndrome"],
+  },
+  {
+    id: "inbox-zero",
+    title: "Get to inbox zero",
+    image: "/images/discover/15.webp",
+    relatedTiles: ["tech-trends"],
+  },
+  {
+    id: "ted-talks",
+    title: "Inspiring TED talks for you",
+    image: "/images/discover/16.webp",
+    relatedTiles: ["perspective", "science"],
+  },
+  {
+    id: "explain-ai",
     title: "Explain generative AI like I'm 5",
     image: "/images/discover/17.webp",
+    relatedTiles: ["tech-trends", "science"],
   },
   {
+    id: "manifest",
     title: "Manifest your deepest desires",
     image: "/images/discover/18.webp",
+    relatedTiles: ["perspective", "brainstorm"],
   },
   {
+    id: "imposter-syndrome",
     title: "Don't let imposter syndrome get the best of you",
     image: "/images/discover/19.webp",
+    relatedTiles: ["criticism", "difficult-feedback"],
   },
   {
+    id: "science",
     title: "Let's talk science",
     image: "/images/discover/20.webp",
+    relatedTiles: ["tech-trends", "fascinating-facts"],
   },
   {
+    id: "insomnia",
     title: "Stop insomnia in its tracks",
     image: "/images/discover/21.webp",
+    relatedTiles: ["sleep-environment", "health-wellness"],
   },
   {
+    id: "difficult-feedback",
     title: "Top tips for giving difficult feedback",
     image: "/images/discover/22.webp",
+    relatedTiles: ["criticism"],
   },
   {
+    id: "fascinating-facts",
     title: "Five fascinating facts...",
     image: "/images/discover/23.webp",
+    relatedTiles: ["science", "learn-new"],
   },
   {
+    id: "tech-trends",
     title: "The latest trends in tech",
     image: "/images/discover/24.webp",
+    relatedTiles: ["explain-ai", "science"],
   },
 ];
 
