@@ -1,15 +1,42 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const alpina = localFont({
+  src: [
+    {
+      path: "../fonts/alpina-regular.woff2",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../fonts/alpina-italics.woff2",
+      weight: "400",
+      style: "italic",
+    },
+  ],
+  variable: "--font-alpina",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const alpina_condensed = localFont({
+  src: [
+    {
+      path: "../fonts/alpina-condensed-normal.woff2",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "../fonts/alpina-condensed-italics.woff2",
+      weight: "700",
+      style: "italic",
+    },
+  ],
+  variable: "--font-alpina-condensed",
+});
+
+const oracle = localFont({
+  src: "../fonts/oracle-regular.woff2",
+  variable: "--font-oracle",
 });
 
 export const metadata: Metadata = {
@@ -25,7 +52,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${alpina.variable} ${oracle.variable} ${alpina_condensed.variable} antialiased`}
       >
         {children}
       </body>

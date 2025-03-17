@@ -1,103 +1,101 @@
-import Image from "next/image";
+"use client";
+
+import ChatInterface from "@/components/chat-interface";
+import DiscoverSection from "@/components/discover-section";
+import Sidebar from "@/components/sidebar";
+import { useState } from "react";
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+  const [activeView, setActiveView] = useState<
+    "discover" | "threads" | "profile"
+  >("discover");
+  const [isViewCollapsed, setIsViewCollapsed] = useState(false);
+  const [messages, setMessages] = useState<
+    Array<{ role: "user" | "assistant"; content: string }>
+  >([
+    {
+      role: "assistant",
+      content:
+        "Hey there, great to meet you. I'm your personal AI. My goal is to be useful, friendly and fun. Ask me for advice, for answers, or let's talk about whatever's on your mind. How's your day going?",
+    },
+  ]);
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
+  const handleSendMessage = (message: string) => {
+    setMessages([...messages, { role: "user", content: message }]);
+
+    // Simulate AI response
+    setTimeout(() => {
+      setMessages((prev) => [
+        ...prev,
+        {
+          role: "assistant",
+          content:
+            "You're welcome! And hey, if you need anything else, you can always chat with me for a while. I don't mind 😊",
+        },
+      ]);
+    }, 1000);
+  };
+
+  const toggleView = (view: "discover" | "threads" | "profile") => {
+    if (activeView === view) {
+      setIsViewCollapsed(!isViewCollapsed);
+    } else {
+      setActiveView(view);
+      setIsViewCollapsed(false);
+    }
+  };
+
+  return (
+    <div className="flex h-screen bg-[#f8f5e9]">
+      <Sidebar activeView={activeView} toggleView={toggleView} />
+      <main className="flex-1 flex">
+        {!isViewCollapsed && (
+          <div className="w-full flex flex-col lg:w-[375px] lg:shrink-0 lg:border-r lg:border-neutral-300">
+            {activeView === "discover" && <DiscoverSection />}
+            {activeView === "threads" && (
+              <div className="h-full p-4 border-r border-[#e0dcc8]">
+                <h1 className="text-xl font-serif text-[#2d3c2d] mb-4">
+                  Threads
+                </h1>
+                <div className="bg-white rounded-lg p-3 mb-3 border border-[#e0dcc8]">
+                  <p className="text-sm">Hey Karan, how&apos;s it going? 😊</p>
+                </div>
+                <div className="bg-[#e8e4d4] rounded-lg p-3 mb-3">
+                  <p className="text-sm">New thread</p>
+                </div>
+              </div>
+            )}
+            {activeView === "profile" && (
+              <div className="h-full p-4 border-r border-[#e0dcc8]">
+                <h1 className="text-xl font-serif text-[#2d3c2d] mb-4">
+                  Karan
+                </h1>
+                <div className="space-y-2">
+                  <div className="flex items-center justify-between p-3 hover:bg-[#e8e4d4] rounded-lg cursor-pointer">
+                    <div className="flex items-center">
+                      <span className="text-[#2d3c2d]">Account</span>
+                    </div>
+                    <span>›</span>
+                  </div>
+                  <div className="flex items-center justify-between p-3 hover:bg-[#e8e4d4] rounded-lg cursor-pointer">
+                    <div className="flex items-center">
+                      <span className="text-[#2d3c2d]">Manage history</span>
+                    </div>
+                    <span>›</span>
+                  </div>
+                  <div className="flex items-center justify-between p-3 hover:bg-[#e8e4d4] rounded-lg cursor-pointer">
+                    <div className="flex items-center">
+                      <span className="text-[#2d3c2d]">Voice settings</span>
+                    </div>
+                    <span>›</span>
+                  </div>
+                </div>
+              </div>
+            )}
+          </div>
+        )}
+        <ChatInterface messages={messages} onSendMessage={handleSendMessage} />
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
     </div>
   );
 }
