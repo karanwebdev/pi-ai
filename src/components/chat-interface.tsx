@@ -16,7 +16,6 @@ export default function ChatInterface({
   onSendMessage,
 }: ChatInterfaceProps) {
   const [input, setInput] = useState("");
-  const userName = "Karan";
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -29,9 +28,6 @@ export default function ChatInterface({
   return (
     <div className="flex-1 flex flex-col">
       <div className="p-4 border-b border-[#e0dcc8] flex justify-between items-center">
-        <h1 className="text-xl font-serif text-[#2d3c2d]">
-          Good afternoon, {userName}
-        </h1>
         <div className="flex items-center space-x-2">
           <Button variant="ghost" size="icon" className="rounded-full">
             <Volume2 className="h-5 w-5 text-[#2d3c2d]" />

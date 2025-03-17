@@ -52,7 +52,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${alpina.variable} ${oracle.variable} ${alpina_condensed.variable} antialiased`}
+        className={`${oracle.variable} ${alpina.variable} ${alpina_condensed.variable}`}
       >
         {children}
       </body>

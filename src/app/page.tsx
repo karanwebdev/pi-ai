@@ -46,14 +46,14 @@ export default function Home() {
   };
 
   return (
-    <div className="flex h-screen bg-[#f8f5e9]">
+    <div className="flex h-screen bg-neutral-50">
       <Sidebar activeView={activeView} toggleView={toggleView} />
       <main className="flex-1 flex">
         {!isViewCollapsed && (
           <div className="w-full flex flex-col lg:w-[375px] lg:shrink-0 lg:border-r lg:border-neutral-300">
             {activeView === "discover" && <DiscoverSection />}
             {activeView === "threads" && (
-              <div className="h-full p-4 border-r border-[#e0dcc8]">
+              <div className="h-full p-4 border-[#e0dcc8]">
                 <h1 className="text-xl font-serif text-[#2d3c2d] mb-4">
                   Threads
                 </h1>

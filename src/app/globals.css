@@ -1,8 +1,37 @@
 @import "tailwindcss";
-
 @plugin "tailwindcss-animate";
-
 @custom-variant dark (&:is(.dark *));
+
+@theme {
+  /* Neutral Palette */
+  --color-neutral-25: #fcfaf7; /* Used for text/bg */
+  --color-neutral-50: #faf3ea; /* Base background */
+  --color-neutral-100: #f7efe3; /* Light bg */
+  --color-neutral-200: #f5eadc; /* Hover states */
+  --color-neutral-300: #ede1d1; /* Borders */
+  --color-neutral-400: #e3d4bf; /* Secondary text */
+  --color-neutral-500: #d9c9b4; /* Icons */
+  --color-neutral-600: #c2b39f; /* Disabled states */
+  --color-neutral-700: #a69986; /* Primary text */
+  --color-neutral-800: #877c6c; /* Secondary headings */
+  --color-neutral-900: #6b6255; /* Headings */
+
+  /* Primary Palette */
+  --color-primary-100: #d9f2ce;
+  --color-primary-500: #00b360; /* Buttons/Accents */
+  --color-primary-600: #038247; /* Hover states */
+  --color-primary-700: #0d3c26; /* Dark accents */
+  --color-primary-900: #051f13; /* Text */
+
+  /* Error Palette */
+  --color-error-main: #d42600; /* Error states */
+  --color-error-disabled: #efb6a4; /* Disabled errors */
+  --color-error-secondary: #fe2828; /* Secondary errors */
+
+  /* Special Cases */
+  --color-card-background: #c3b9ab; /* Card bg */
+  --color-code-background: #343533; /* Code blocks */
+}
 
 @theme inline {
   --color-background: var(--background);
@@ -114,6 +143,37 @@ body {
 }
 
 @layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+
+  .rounded-10 {
+    border-radius: 10px;
+  }
+
+  .rounded-20 {
+    border-radius: 20px;
+  }
+
+  .shadow-card,
+  .shadow-input {
+    --tw-shadow: 0px 12px 32px -6px #e4dbc8, 0px 2px 16px -6px #0000001a;
+    --tw-shadow-colored: 0px 12px 32px -6px var(--tw-shadow-color),
+      0px 2px 16px -6px var(--tw-shadow-color);
+  }
+
+  .shadow-card,
+  .shadow-input,
+  .shadow-lg {
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+      var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+
   .text-h-xl-mobile {
     font-size: 3rem;
     line-height: 2.85rem;
@@ -196,5 +256,200 @@ body {
     line-height: 0.875rem;
     letter-spacing: -0.025em;
     font-weight: 350;
+  }
+}
+
+@layer components {
+  /* .t-action-s and .t-label share the same font settings */
+  .t-action-s,
+  .t-label {
+    font-family: var(--font-oracle), ui-sans-serif, system-ui, -apple-system,
+      BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+      "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+      "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 0.875rem; /* 14px */
+  }
+
+  /* Additional styles for .t-label */
+  .t-label {
+    line-height: 1.225rem; /* 19.6px */
+    letter-spacing: -0.24px;
+    font-weight: 350;
+  }
+
+  /* Styles for .t-label-s */
+  .t-label-s {
+    font-family: var(--font-oracle), ui-sans-serif, system-ui, -apple-system,
+      BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+      "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+      "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 0.75rem; /* 12px */
+    line-height: 1.05rem; /* 16.8px */
+    letter-spacing: -0.2px;
+    font-weight: 350;
+  }
+
+  /* Styles for .t-code */
+  .t-code {
+    line-height: 1.35625rem; /* 21.7px */
+  }
+
+  /* Add new typography styles */
+  .t-heading-xl {
+    font-family: var(--font-alpina-condensed), var(--font-alpina), ui-serif,
+      Georgia, Cambria, "Times New Roman", Times, serif;
+    font-size: 3rem;
+    line-height: 2.85rem;
+    letter-spacing: -0.96px;
+    font-weight: 350;
+  }
+
+  @media (min-width: 1024px) {
+    .t-heading-xl {
+      font-size: 4rem;
+      line-height: 3.8rem;
+      letter-spacing: -0.96px;
+      font-weight: 350;
+    }
+  }
+
+  .t-heading-l {
+    font-family: var(--font-alpina-condensed), var(--font-alpina), ui-serif,
+      Georgia, Cambria, "Times New Roman", Times, serif;
+    font-size: 2.25rem;
+    line-height: 2.25rem;
+    letter-spacing: -0.54px;
+    font-weight: 350;
+  }
+
+  @media (min-width: 1024px) {
+    .t-heading-l {
+      font-size: 3rem;
+      line-height: 2.85rem;
+      letter-spacing: -0.72px;
+      font-weight: 350;
+    }
+  }
+
+  .t-heading-m {
+    font-family: var(--font-alpina-condensed), var(--font-alpina), ui-serif,
+      Georgia, Cambria, "Times New Roman", Times, serif;
+    font-size: 1.75rem;
+    line-height: 1.75rem;
+    letter-spacing: -0.56px;
+    font-weight: 350;
+  }
+
+  @media (min-width: 1024px) {
+    .t-heading-m {
+      font-size: 2.25rem;
+      line-height: 2.25rem;
+      letter-spacing: -0.54px;
+      font-weight: 350;
+    }
+  }
+
+  .t-heading-s {
+    font-family: var(--font-alpina), ui-serif, Georgia, Cambria,
+      "Times New Roman", Times, serif;
+    font-size: 1.1875rem;
+    line-height: 1.30625rem;
+    letter-spacing: -0.19px;
+    font-weight: 400;
+  }
+
+  .t-body-chat {
+    font-family: var(--font-alpina), ui-serif, Georgia, Cambria,
+      "Times New Roman", Times, serif;
+    font-size: 1.1875rem;
+    line-height: 1.721875rem;
+    letter-spacing: -0.19px;
+    font-weight: 350;
+  }
+
+  @media (min-width: 1024px) {
+    .t-body-chat {
+      font-size: 1.375rem;
+      line-height: 1.99375rem;
+      letter-spacing: -0.22px;
+      font-weight: 350;
+    }
+  }
+
+  @media (min-width: 1536px) {
+    .t-body-chat {
+      font-size: 1.5rem;
+      line-height: 2.175rem;
+      letter-spacing: -0.24px;
+      font-weight: 350;
+    }
+  }
+
+  .t-body-m {
+    font-family: var(--font-oracle), ui-sans-serif, system-ui, -apple-system,
+      BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+      "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+      "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 1.125rem;
+    line-height: 1.575rem;
+    letter-spacing: -0.36px;
+    font-weight: 350;
+  }
+
+  @media (min-width: 1024px) {
+    .t-body-m {
+      font-size: 1.25rem;
+      line-height: 1.75rem;
+      letter-spacing: -0.4px;
+      font-weight: 350;
+    }
+  }
+
+  .t-body-s {
+    font-family: var(--font-oracle), ui-sans-serif, system-ui, -apple-system,
+      BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+      "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+      "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 0.875rem;
+    line-height: 1.225rem;
+    letter-spacing: -0.14px;
+    font-weight: 350;
+  }
+
+  @media (min-width: 1024px) {
+    .t-body-s {
+      font-size: 1.0625rem;
+      line-height: 1.4875rem;
+      letter-spacing: -0.34px;
+      font-weight: 350;
+    }
+  }
+
+  .t-action-l {
+    font-family: var(--font-oracle), ui-sans-serif, system-ui, -apple-system,
+      BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+      "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+      "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 1.375rem;
+    line-height: 1.5125rem;
+    letter-spacing: -0.36px;
+    font-weight: 400;
+  }
+
+  .t-code-inline {
+    font-family: var(--font-mono), ui-monospace, SFMono-Regular, Menlo, Monaco,
+      Consolas, "Liberation Mono", "Courier New", monospace;
+    font-size: 0.875rem;
+    line-height: 0.875rem;
+    letter-spacing: -0.025em;
+    font-weight: 350;
+  }
+
+  @media (min-width: 768px) {
+    .t-code-inline {
+      font-size: 1rem;
+      line-height: 1rem;
+      font-weight: 350;
+    }
   }
 }
