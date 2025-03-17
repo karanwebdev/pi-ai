@@ -74,19 +74,19 @@ export default function ChatInterface({
 
       <form
         onSubmit={handleSubmit}
-        className="p-4 border-t border-[#e0dcc8] flex items-center"
+        className="max-h-[40%] px-5 sm:px-0 z-15 w-full mx-auto max-w-[38.5rem] 2xl:max-w-[47rem]"
       >
-        <div className="relative flex-1">
+        <div className="relative flex h-full w-full cursor-text items-end border border-transparent bg-neutral-25 shadow-input transition-all duration-300 focus-within:border-neutral-400 focus-within:shadow-none hover:border-neutral-400 hover:shadow-none rounded-[30px]">
           <input
             type="text"
             value={input}
             onChange={(e) => setInput(e.target.value)}
-            placeholder="Talk with AI"
-            className="w-full p-3 pr-10 rounded-full border border-[#e0dcc8] focus:outline-none focus:ring-1 focus:ring-[#2d3c2d] bg-white"
+            placeholder="Talk with Pi"
+            className="h-full grow overflow-y-auto py-3 pl-[1.185rem] pr-4 lg:py-2.5 2xl:py-[8.5px]"
           />
           <button
             type="submit"
-            className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-[#2d3c2d] text-white p-1.5 rounded-full"
+            className="flex h-9 w-9 items-center justify-center rounded-full p-1.5 text-neutral-600 bg-neutral-50 m-2 transition-colors duration-300"
             disabled={!input.trim()}
           >
             <ArrowUp className="h-4 w-4" />
@@ -94,10 +94,12 @@ export default function ChatInterface({
         </div>
       </form>
 
-      <div className="p-2 text-center text-xs text-gray-500">
-        By using AI, you agree to our{" "}
-        <span className="text-[#2d3c2d] underline">Terms</span> and{" "}
-        <span className="text-[#2d3c2d] underline">Privacy Policy</span>.
+      <div className="px-5 py-6 w-full mx-auto max-w-[38.5rem] 2xl:max-w-[47rem]">
+        <div className="t-label mx-auto text-center text-neutral-900">
+          By using Pi, you agree to our{" "}
+          <span className="text-primary-600 underline">Terms</span> and{" "}
+          <span className="text-primary-600 underline">Privacy Policy</span>.
+        </div>
       </div>
     </div>
   );

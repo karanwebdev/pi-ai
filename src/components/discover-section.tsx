@@ -12,6 +12,40 @@ const tiles = [
   {
     title: "Health and wellness trends of 2024",
     image: "/images/discover/4.webp",
+    blocks: [
+      {
+        type: "text",
+        content:
+          "Keeping fit and healthy is one of the best things you can do for yourself, but it can sometimes feel tedious.",
+      },
+      {
+        type: "text",
+        content:
+          "Shake up your routine by trying out some of these top 5 health and wellness trends for this year:",
+      },
+      {
+        type: "list",
+        ordered: true,
+        items: [
+          "Personalized wellness plans: As people become more aware of their individual health needs, personalized wellness plans that take into account factors like genetics, lifestyle, and personal preferences will become more common.",
+          "Digital health tools: The use of digital tools and apps to track and monitor health metrics like heart rate, sleep patterns, and nutrition will continue to grow.",
+          "Plant-based diets: As people become more conscious of the environmental impact of their food choices, plant-based diets are expected to become more popular.",
+          "Mind-body practices: Practices like meditation, yoga, and mindfulness are expected to continue growing in popularity as people seek ways to reduce stress and improve mental well-being.",
+          "Functional fitness: Workouts that focus on improving functional abilities like strength, balance, and flexibility will become more popular as people seek to maintain their health and independence as they age.",
+        ],
+      },
+      {
+        type: "text",
+        content:
+          "I hope you feel inspired to carry on in your journey to optimal health and well-being.",
+      },
+      {
+        type: "text",
+        content:
+          "Are there any areas of healthy living you’d like to talk about more?",
+      },
+    ],
+    references: [],
   },
   { title: "Learn about something new", image: "/images/discover/5.webp" },
   { title: "Brainstorm ideas", image: "/images/discover/6.webp" },
