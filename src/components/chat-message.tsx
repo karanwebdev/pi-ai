@@ -1,15 +1,13 @@
-import { Message } from "@/app/types";
-import discoverData from "@/data/discover-data.json";
+import { Message } from "@/types";
 import Image from "next/image";
 import type React from "react";
 import { TextAnimate } from "./ui/text-animate";
-import { useChatStore } from "@/store/chat-store";
 import { memo } from "react";
 
 const ChatMessage = memo(({ message }: { message: Message }) => {
-    const populateFromTile = useChatStore(state => state.populateFromTile)
-    const findTileById = (id: string) =>
-        discoverData.find((tile) => tile.id === id);
+    // const populateFromTile = useChatStore(state => state.populateFromTile)
+    // const findTileById = (id: string) =>
+    //     discoverData.find((tile) => tile.id === id);
   
       return (
         <div className="space-y-4">
@@ -89,7 +87,7 @@ const ChatMessage = memo(({ message }: { message: Message }) => {
             <TextAnimate animation="blurIn">{message.content}</TextAnimate>
           )}
   
-          {message.relatedTiles && message.relatedTiles.length > 0 && (
+          {/* {message.relatedTiles && message.relatedTiles.length > 0 && (
             <div className="mt-6 pt-4 border-t border-neutral-200">
               <div className="grid grid-cols-2 gap-4">
                 {message.relatedTiles.map((tileId, index) => {
@@ -119,7 +117,7 @@ const ChatMessage = memo(({ message }: { message: Message }) => {
                 })}
               </div>
             </div>
-          )}
+          )} */}
         </div>
       );
 })

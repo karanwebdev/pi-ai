@@ -1,6 +1,6 @@
 "use client";
 
-import { Role } from "@/app/types";
+import { Role } from "@/types";
 import type React from "react";
 import { useChatStore } from "@/store/chat-store";
 import ChatInput from "./chat-input";
@@ -34,7 +34,7 @@ export default function ChatInterface() {
             <div className="scrollbar-gutter-both-edges relative h-full overflow-y-auto overflow-x-hidden">
               <div className="t-body-chat relative h-full space-y-6 px-5 text-primary-700 w-full mx-auto max-w-[38.5rem] 2xl:max-w-[47rem]">
                 <div className="pb-6 lg:pb-8 min-h-[calc(100%-60px)] sm:min-h-[calc(100%-120px)]">
-                  <div className="relative space-y-6 pt-40">
+                  <div className="relative space-y-6 pt-36">
                     {messages.map((message, index) => (
                       <div
                         key={index}

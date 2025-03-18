@@ -3,7 +3,7 @@ import { generateChatResponse } from "@/actions/chat";
 import { useChatStore } from "@/store/chat-store";
 import { ArrowUp } from "lucide-react";
 import { useForm } from "react-hook-form";
-import { Role } from '@/app/types';
+import { Role } from '@/types';
 
 type FormData = {
     message: string;

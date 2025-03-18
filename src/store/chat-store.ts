@@ -1,4 +1,4 @@
-import { Message, Role, Tile } from "@/app/types";
+import { Message, Role, Tile } from "@/types";
 import { create } from "zustand";
 
 interface ChatState {
@@ -12,7 +12,7 @@ export const useChatStore = create<ChatState>((set) => ({
     {
       role: Role.ASSISTANT,
       content:
-        "Hey there, great to meet you. I'm your personal AI. My goal is to be useful, friendly and fun. Ask me for advice, for answers, or let's talk about whatever's on your mind. How's your day going?",
+        "Hey there, great to meet you. I'm Pi, your personal AI. My goal is to be useful, friendly and fun. Ask me for advice, for answers, or let's talk about whatever's on your mind. How's your day going?",
     },
   ],
 

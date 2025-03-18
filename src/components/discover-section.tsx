@@ -38,11 +38,11 @@ export default function DiscoverSection() {
       <h2 className="mb-6 px-6 ">
         <div className="font-alpina-condensed text-h-m text-primary-700">
           {/* TODO: Greet based on time */}
-          Good evening
+          Good morning
         </div>
       </h2>
 
-      <div className="mb-6 mx-6 px-6  flex items-center rounded-20 border border-white bg-neutral-50 p-4 shadow-card transition-all duration-150 hover:scale-95 hover:bg-neutral-50-hover">
+      <div className="mb-6 mx-6  flex items-center rounded-20 border border-white bg-neutral-50 p-4 shadow-card transition-all duration-150 hover:scale-95 hover:bg-neutral-50-hover">
         <div className="min-w-[56px] min-h-[56px] mr-4">
           <Image
             src={"/icons/chat.svg"}

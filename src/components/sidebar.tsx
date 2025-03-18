@@ -1,25 +1,30 @@
 "use client";
 
 import clsx from "clsx";
+import { usePathname } from "next/navigation";
+import Link from "next/link";
+
+type View = "discover" | "threads" | "profile";
 
 interface SidebarProps {
-  activeView: "discover" | "threads" | "profile";
-  toggleView: (view: "discover" | "threads" | "profile") => void;
+  className?: string;
 }
 
 //TODO: Make button reusable comp, handle gap-0.5/1.5 discrepancy
-export default function Sidebar({ activeView, toggleView }: SidebarProps) {
+export default function Sidebar({  }: SidebarProps) {
+  const pathname = usePathname();
+  const currentView = pathname.split("/")[1] as View || "discover";
   return (
     <div className="hidden w-22 text-neutral-900 bg-neutral-50 lg:flex flex-col items-center gap-1 p-3 pt-5 border-r border-neutral-300">
-      <button
-        onClick={() => toggleView("discover")}
+      <Link
+        href="/discover"
         className={clsx(
           "flex h-16 w-16 flex-col items-center justify-center rounded-xl text-primary-900 cursor-pointer gap-0.5",
           {
-            "bg-neutral-300": activeView === "discover",
+            "bg-neutral-300": currentView === "discover",
             // TODO: Add hover classes
             "text-neutral-900 hover:bg-neutral-500 hover:text-neutral-900-hover active:bg-neutral-50-tap active:text-neutral-900-tap":
-              activeView !== "discover",
+              currentView !== "discover",
           }
         )}
         aria-label="Go to Discover page"
@@ -38,17 +43,17 @@ export default function Sidebar({ activeView, toggleView }: SidebarProps) {
           ></path>
         </svg>
         <span className="t-label font-normal">Discover</span>
-      </button>
+      </Link>
 
-      <button
-        onClick={() => toggleView("threads")}
+      <Link
+        href="/threads"
         className={clsx(
           "flex h-16 w-16 flex-col items-center justify-center rounded-xl hover:bg-neutral-50 text-primary-900 cursor-pointer gap-1.5",
           {
-            "bg-neutral-300": activeView === "threads",
+            "bg-neutral-300": currentView === "threads",
             // TODO: Add hover classes
             "text-neutral-900 hover:bg-neutral-500 hover:text-neutral-900-hover active:bg-neutral-50-tap active:text-neutral-900-tap":
-              activeView !== "threads",
+            currentView !== "threads",
           }
         )}
         aria-label="Go to Discover page"
@@ -100,17 +105,17 @@ export default function Sidebar({ activeView, toggleView }: SidebarProps) {
           ></path>
         </svg>
         <span className="t-label font-normal">Threads</span>
-      </button>
+      </Link>
 
-      <button
-        onClick={() => toggleView("profile")}
+      <Link
+        href="/profile"
         className={clsx(
           "flex h-16 w-16 flex-col items-center justify-center rounded-xl hover:bg-neutral-50 text-primary-900 cursor-pointer gap-1.5",
           {
-            "bg-neutral-300": activeView === "profile",
+            "bg-neutral-300": currentView === "profile",
             // TODO: Add hover classes
             "text-neutral-900 hover:bg-neutral-500 hover:text-neutral-900-hover active:bg-neutral-50-tap active:text-neutral-900-tap":
-              activeView !== "profile",
+            currentView !== "profile",
           }
         )}
         aria-label="Go to Profile page"
@@ -124,7 +129,7 @@ export default function Sidebar({ activeView, toggleView }: SidebarProps) {
           <path d="M12 12C10.9 12 9.95833 11.6083 9.175 10.825C8.39167 10.0417 8 9.1 8 8C8 6.9 8.39167 5.95833 9.175 5.175C9.95833 4.39167 10.9 4 12 4C13.1 4 14.0417 4.39167 14.825 5.175C15.6083 5.95833 16 6.9 16 8C16 9.1 15.6083 10.0417 14.825 10.825C14.0417 11.6083 13.1 12 12 12ZM18 20H6C5.45 20 4.97933 19.8043 4.588 19.413C4.196 19.021 4 18.55 4 18V17.2C4 16.6333 4.146 16.1123 4.438 15.637C4.72933 15.1623 5.11667 14.8 5.6 14.55C6.63333 14.0333 7.68333 13.6457 8.75 13.387C9.81667 13.129 10.9 13 12 13C13.1 13 14.1833 13.129 15.25 13.387C16.3167 13.6457 17.3667 14.0333 18.4 14.55C18.8833 14.8 19.2707 15.1623 19.562 15.637C19.854 16.1123 20 16.6333 20 17.2V18C20 18.55 19.8043 19.021 19.413 19.413C19.021 19.8043 18.55 20 18 20Z"></path>
         </svg>
         <span className="t-label font-normal">Profile</span>
-      </button>
+      </Link>
     </div>
   );
 }

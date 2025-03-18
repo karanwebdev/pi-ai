@@ -34,7 +34,31 @@
     "id": "health-wellness",
     "title": "Health and wellness trends of 2024",
     "image": "/images/discover/4.webp",
-    "blocks": [],
+    "blocks": [
+      {
+        "type": "text",
+        "content": "Health and wellness have become increasingly important in our fast-paced modern world. Let's explore the key trends shaping our well-being in 2024."
+      },
+      {
+        "type": "text",
+        "content": "Major wellness trends this year include:"
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "items": [
+          "Mental Health Tech: Apps and devices for meditation, stress tracking, and emotional wellness",
+          "Personalized Nutrition: AI-powered diet plans based on individual genetics and lifestyle",
+          "Hybrid Fitness: Blend of virtual and in-person workouts with smart technology integration",
+          "Sleep Optimization: Advanced sleep tracking and improvement technologies",
+          "Eco-Wellness: Sustainable practices that benefit both personal and environmental health"
+        ]
+      },
+      {
+        "type": "text",
+        "content": "Which of these wellness trends interests you the most? I'd be happy to discuss specific strategies and tips for any area of health and wellness."
+      }
+    ],
     "references": [],
     "relatedTiles": ["gut-health", "sleep-environment", "insomnia", "energy"]
   },
@@ -757,41 +781,5 @@
       }
     ],
     "relatedTiles": ["explain-ai", "science", "learn-new", "fascinating-facts"]
-  },
-  {
-    "id": "gut-health",
-    "title": "Improve your gut health",
-    "image": "/images/discover/25.webp",
-    "blocks": [
-      {
-        "type": "text",
-        "content": "Your gut microbiome plays a crucial role in overall health, affecting everything from digestion to immunity and even mood."
-      },
-      {
-        "type": "text",
-        "content": "Ways to support a healthy gut:"
-      },
-      {
-        "type": "list",
-        "ordered": false,
-        "items": [
-          "Eat a diverse diet rich in fiber from fruits, vegetables, legumes, and whole grains",
-          "Include fermented foods like yogurt, kefir, sauerkraut, and kimchi",
-          "Stay hydrated to support the mucosal lining of the intestines",
-          "Manage stress through mindfulness, adequate sleep, and regular exercise",
-          "Limit processed foods, artificial sweeteners, and excessive alcohol"
-        ]
-      },
-      {
-        "type": "text",
-        "content": "Would you like personalized suggestions for improving your gut health based on your current diet and lifestyle?"
-      }
-    ],
-    "relatedTiles": [
-      "health-wellness",
-      "energy",
-      "sleep-environment",
-      "insomnia"
-    ]
   }
 ]

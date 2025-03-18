@@ -1,4 +1,6 @@
-import { Tile } from "@/app/types";
+"use client"
+
+import { Tile } from "@/types";
 import { useChatStore } from "@/store/chat-store";
 import Image from "next/image";
 import React from "react";

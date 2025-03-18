@@ -30,13 +30,13 @@ export default function OnboardingPage() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#f9f5f0]">
+    <div className="min-h-screen flex flex-col bg-neutral-50">
       {step === 1 && (
         <div className="flex flex-col h-screen">
           <div className="flex-1 flex items-center justify-center">
             <ResponsiveLottie />
           </div>
-          <div className="p-6 pb-8 w-full fixed bottom-0 left-0 right-0 flex flex-col items-center bg-[#f9f5f0]">
+          <div className="p-6 pb-8 w-full fixed bottom-0 left-0 right-0 flex flex-col items-center bg-neutral-50">
             <button
               onClick={handleNext}
               className="w-full max-w-md py-3 px-6 rounded-full bg-[#2d3c2d] text-white font-medium text-lg mb-4"

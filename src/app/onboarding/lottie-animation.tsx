@@ -18,11 +18,12 @@ export default function ResponsiveLottie() {
   }, []);
 
   return (
-    <div className="w-2/3 mx-auto h-screen">
+    <div className="mx-auto h-screen w-screen bg-neutral-50">
       <Lottie
         animationData={isMobile ? mobileAnimation : webAnimation}
         loop={false}
         autoplay={true}
+        className="w-2/3 h-3/4 mx-auto"
       />
     </div>
   );
