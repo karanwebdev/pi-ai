@@ -1,9 +1,14 @@
+"use client";
+
 import discoverData from "@/data/discover-data.json";
 import Image from "next/image";
 import Link from "next/link";
 import MasonryLayout from "./masonry-layout";
+import { getTimeBasedGreeting } from "@/lib/utils";
+import { useUserStore } from "@/store/user-store";
 
 export default function DiscoverSection() {
+  const name = useUserStore(state => state.name);
   return (
     <div className="h-full overflow-y-auto no-scrollbar bg-neutral-100 lg:pt-8">
       <div className="bg-card-background">
@@ -38,8 +43,7 @@ export default function DiscoverSection() {
       </div>
       <h2 className="mb-6 px-6 ">
         <div className="font-alpina-condensed text-h-m text-primary-700">
-          {/* TODO: Greet based on time */}
-          Good morning
+          {getTimeBasedGreeting()}{name ? `, ${name}` : ''}
         </div>
       </h2>
 

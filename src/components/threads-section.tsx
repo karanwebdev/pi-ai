@@ -4,10 +4,13 @@ import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
 import React from 'react';
+import { useUserStore } from '@/store/user-store';
 
 export default function ThreadsSection() {
   const router = useRouter();
   const [isMobile, setIsMobile] = React.useState(false);
+  const name = useUserStore(state => state.name);
+
 
   React.useEffect(() => {
     const checkMobile = () => setIsMobile(window.innerWidth < 1024);
@@ -53,13 +56,13 @@ export default function ThreadsSection() {
       </div>
 
       <div className="px-4 lg:px-6">
-        <h1 className="text-xl font-alpina-condensed text-primary-700 mb-4">Threads</h1>
+        <h1 className="text-h-l-mobile font-alpina-condensed text-primary-700 mb-4">Threads</h1>
         
         <button
           onClick={handleThreadClick}
           className="w-full bg-white rounded-lg p-3 mb-3 border border-neutral-300 hover:bg-neutral-50-hover text-left transition-colors"
         >
-          <p className="text-sm">Hey Karan, how&apos;s it going? 😊</p>
+          <p className="text-sm">Hey {name}, how&apos;s it going? 😊</p>
         </button>
 
         <button

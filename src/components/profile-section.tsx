@@ -1,9 +1,12 @@
 import Link from "next/link";
 
+import { useUserStore } from "@/store/user-store";
+
 export default function ProfileSection() {
+  const name = useUserStore(state => state.name);
   return (
     <div className="h-full p-4 border-r border-[#e0dcc8]">
-      <h1 className="text-xl font-serif text-[#2d3c2d] mb-4">Karan</h1>
+      <h1 className="text-h-l-mobile mt-2 text-xl font-alpina-condensed text-primary-700 mb-4">{name || 'Profile'}</h1>
       <div className="space-y-2">
         <Link
           href="/profile/account"

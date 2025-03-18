@@ -2,6 +2,7 @@
 import dynamic from "next/dynamic";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import { useUserStore } from "@/store/user-store";
 
 // Dynamically import Lottie component to disable SSR
 const ResponsiveLottie = dynamic(() => import("./lottie-animation"), {
@@ -17,10 +18,8 @@ export default function OnboardingPage() {
     if (step === 1) {
       setStep(2);
     } else if (step === 2 && userName.trim()) {
-      // Save the user name to localStorage
-      localStorage.setItem("userName", userName);
-      // Redirect to home page
-      router.push("/");
+      useUserStore.getState().setName(userName);
+      router.push("/discover");
     }
   };
 
@@ -39,13 +38,13 @@ export default function OnboardingPage() {
           <div className="p-6 pb-8 w-full fixed bottom-0 left-0 right-0 flex flex-col items-center bg-neutral-50">
             <button
               onClick={handleNext}
-              className="w-full max-w-md py-3 px-6 rounded-full bg-[#2d3c2d] text-white font-medium text-lg mb-4"
+              className="w-full max-w-md py-3 px-6 rounded-full bg-[#2d3c2d] text-white font-medium text-lg mb-4 cursor-pointer"
             >
               Next
             </button>
             <button
               onClick={handleLogin}
-              className="text-[#2d3c2d] font-medium"
+              className="text-[#2d3c2d] font-medium cursor-pointer"
             >
               Login
             </button>
@@ -54,15 +53,15 @@ export default function OnboardingPage() {
       )}
 
       {step === 2 && (
-        <div className="flex flex-col h-screen p-6">
+        <div className="flex flex-col h-screen w-screen p-6">
           <div className="flex-1 flex flex-col justify-center max-w-md mx-auto w-full">
-            <h1 className="text-4xl font-serif text-[#2d3c2d] mb-4">
+            <h1 className="text-4xl font-alpina-condensed text-[#2d3c2d] mb-4">
               Hello! I&apos;m Pi.
               <span role="img" aria-label="waving hand" className="ml-2">
                 👋
               </span>
             </h1>
-            <h2 className="text-4xl font-serif text-[#2d3c2d] mb-8">
+            <h2 className="text-4xl font-alpina-condensed text-[#2d3c2d] mb-8">
               What&apos;s your name?
             </h2>
             <p className="text-gray-600 mb-8">
