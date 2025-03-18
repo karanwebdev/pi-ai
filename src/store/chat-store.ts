@@ -27,7 +27,6 @@ export const useChatStore = create<ChatState>((set) => ({
 
   populateFromTile: (tile: Tile) =>
     set(() => {
-      // Create a new message with the tile's content
       const newMessage: Message = {
         role: Role.ASSISTANT,
         content: "", 
@@ -38,8 +37,6 @@ export const useChatStore = create<ChatState>((set) => ({
         relatedTiles: tile.relatedTiles,
       };
 
-      // Replace the messages with just this new message
-      // This clears the chat and starts fresh with the tile content
       return {
         messages: [newMessage],
       };

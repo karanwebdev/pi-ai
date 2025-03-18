@@ -44,7 +44,6 @@ const MasonryLayout: React.FC<{ tiles: Tile[] }> = ({ tiles }) => {
         const handleTileClick = () => {
           if (tile.blocks && tile.blocks.length > 0) {
             populateFromTile(tile);
-            // Navigate to talk page on mobile
             if (isMobile) {
               router.push('/talk');
             }
