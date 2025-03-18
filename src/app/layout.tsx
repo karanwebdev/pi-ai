@@ -42,12 +42,13 @@ const oracle = localFont({
 export const metadata: Metadata = {
   title: "Pi - Prabakaran A S",
   description: "Pi AI Clone for Sarvam FE Assignment - Prabakaran A S",
+  metadataBase: new URL("https://pi-ai-sarvam.vercel.app"),
   openGraph: {
     title: "Pi Clone - Prabakaran A S",
     description: "Pi AI Clone for Sarvam FE Assignment - Prabakaran A S",
     type: "website",
-    url: "pi-ai-sarvam.vercel.app",
-    images: [{ url: "pi-ai-sarvam.vercel.app/images/og-image.png" }],
+    url: "https://pi-ai-sarvam.vercel.app",
+    images: [{ url:"https://pi-ai-sarvam.vercel.app/images/og-image.png" }],
 },
 };
 

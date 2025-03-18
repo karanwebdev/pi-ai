@@ -1,25 +1,15 @@
 "use server";
 
 import { env } from "@/env";
+import { Message, Role } from "@/types";
 import OpenAI from "openai";
 
 const openai = new OpenAI({
   apiKey: env.OPENAI_API_KEY,
 });
 
-enum Role {
-  USER = "user",
-  ASSISTANT = "assistant",
-  SYSTEM = "system",
-}
-interface Message {
-  role: Role.USER | Role.ASSISTANT | Role.SYSTEM;
-  content: string;
-}
-
 export async function generateChatResponse(messages: Message[]) {
   try {
-    // Add a system message if there isn't one
     if (!messages.some((message) => message.role === Role.SYSTEM)) {
       messages = [
         {

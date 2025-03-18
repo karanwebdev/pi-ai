@@ -25,6 +25,12 @@ export enum Role {
   SYSTEM = "system",
 }
 
+export enum View {
+  DISCOVER = "discover",
+  THREADS = "threads",
+  PROFILE = "profile",
+}
+
 export interface Message {
   role: Role;
   content: string;

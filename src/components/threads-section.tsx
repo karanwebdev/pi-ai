@@ -5,19 +5,13 @@ import Link from 'next/link';
 import Image from 'next/image';
 import React from 'react';
 import { useUserStore } from '@/store/user-store';
+import useMediaQuery from "@/hooks/use-media-query";
 
 export default function ThreadsSection() {
   const router = useRouter();
-  const [isMobile, setIsMobile] = React.useState(false);
+  const { isMobile } = useMediaQuery();
   const name = useUserStore(state => state.name);
 
-
-  React.useEffect(() => {
-    const checkMobile = () => setIsMobile(window.innerWidth < 1024);
-    checkMobile();
-    window.addEventListener('resize', checkMobile);
-    return () => window.removeEventListener('resize', checkMobile);
-  }, []);
 
   const handleThreadClick = () => {
     if (isMobile) {

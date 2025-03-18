@@ -1,21 +1,12 @@
 "use client";
 
 import Lottie from "lottie-react";
-import { useEffect, useState } from "react";
 import mobileAnimation from "./intro-mobile.json";
 import webAnimation from "./intro-web.json";
+import useMediaQuery from "@/hooks/use-media-query";
 
 export default function ResponsiveLottie() {
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const checkMobile = () => window.innerWidth <= 768;
-    setIsMobile(checkMobile());
-
-    const handleResize = () => setIsMobile(checkMobile());
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  const { isMobile } = useMediaQuery();
 
   return (
     <div className="mx-auto h-screen w-screen bg-neutral-50">

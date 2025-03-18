@@ -5,18 +5,12 @@ import { useChatStore } from "@/store/chat-store";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import React from "react";
+import useMediaQuery from "@/hooks/use-media-query";
 
 const MasonryLayout: React.FC<{ tiles: Tile[] }> = ({ tiles }) => {
   const populateFromTile = useChatStore((state) => state.populateFromTile);
   const router = useRouter();
-  const [isMobile, setIsMobile] = React.useState(false);
-
-  React.useEffect(() => {
-    const checkMobile = () => setIsMobile(window.innerWidth < 1024);
-    checkMobile();
-    window.addEventListener('resize', checkMobile);
-    return () => window.removeEventListener('resize', checkMobile);
-  }, []);
+  const { isMobile } = useMediaQuery();
 
   return (
     <div

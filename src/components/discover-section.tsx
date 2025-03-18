@@ -43,7 +43,7 @@ export default function DiscoverSection() {
       </div>
       <h2 className="mb-6 px-6 ">
         <div className="font-alpina-condensed text-h-m text-primary-700">
-          {getTimeBasedGreeting()}{name ? `, ${name}` : ''}
+          {getTimeBasedGreeting()}{name && <span className="italic">, {name}</span> }
         </div>
       </h2>
 
