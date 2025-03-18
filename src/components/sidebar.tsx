@@ -9,6 +9,7 @@ const navigationItems = [
     href: "/discover",
     icon: "/icons/sidebar/discover.svg",
     label: "Discover",
+    alt: "Discover new conversations",
     view: View.DISCOVER,
     iconSize: { width: 28, height: 28 },
     gap: "small" as const,
@@ -17,12 +18,14 @@ const navigationItems = [
     href: "/threads",
     icon: "/icons/sidebar/threads.svg",
     label: "Threads",
+    alt: "View conversation threads",
     view: View.THREADS,
   },
   {
     href: "/profile",
     icon: "/icons/sidebar/profile.svg",
     label: "Profile",
+    alt: "Access your profile settings",
     view: View.PROFILE,
   },
 ];
@@ -43,6 +46,7 @@ export default function Sidebar({ }: SidebarProps) {
           href={item.href}
           icon={item.icon}
           label={item.label}
+          alt={item.alt}
           isActive={currentView === item.view}
           iconSize={item.iconSize}
           gap={item.gap}

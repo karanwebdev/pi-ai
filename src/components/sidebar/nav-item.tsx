@@ -8,6 +8,7 @@ interface NavItemProps {
   href: string;
   icon: string;
   label: string;
+  alt?: string;
   isActive: boolean;
   iconSize?: { width: number; height: number };
   gap?: "small" | "large";
@@ -17,6 +18,7 @@ export default function NavItem({
   href,
   icon,
   label,
+  alt,
   isActive,
   iconSize = { width: 24, height: 24 },
   gap = "large",
@@ -37,7 +39,7 @@ export default function NavItem({
     >
       <Image
         src={icon}
-        alt={label}
+        alt={alt || label}
         width={iconSize.width}
         height={iconSize.height}
       />

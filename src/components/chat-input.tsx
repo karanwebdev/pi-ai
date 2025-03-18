@@ -21,11 +21,12 @@ const ChatInput = () => {
           message: "",
         },
       });
-      const { messages, addMessage } = useChatStore();
+      const { messages, addMessage, setLoading } = useChatStore();
     
       const onSubmit = async (data: FormData) => {
         addMessage(Role.USER, data.message);
         reset();
+        setLoading(true);
     
         try {
           const response = await generateChatResponse([
@@ -41,12 +42,14 @@ const ChatInput = () => {
           } else {
             throw new Error(response.error || "Unknown error");
           }
+          setLoading(false);
         } catch (error) {
           console.error("Error calling OpenAI:", error);
           addMessage(
             Role.ASSISTANT,
             "Sorry, I encountered an error. Please try again."
           );
+          setLoading(false);
         }
       };
   return (
@@ -74,6 +77,7 @@ const ChatInput = () => {
               type="submit"
               className="flex h-9 w-9 items-center justify-center rounded-full p-1.5 text-neutral-600 bg-neutral-50 m-2 transition-colors duration-300"
               disabled={!isValid || isSubmitting}
+              aria-label="Send message"
             >
               <ArrowUp className="h-4 w-4" />
             </button>
