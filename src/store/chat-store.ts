@@ -1,37 +1,16 @@
-import { Tile } from "@/app/types/tile";
+import { Message, Role, Tile } from "@/app/types";
 import { create } from "zustand";
-
-interface Block {
-  type: string;
-  content?: string;
-  ordered?: boolean;
-  items?: string[];
-}
-
-interface Reference {
-  title: string;
-  icon: string;
-}
-
-interface Message {
-  role: "user" | "assistant";
-  content: string;
-  blocks?: Block[];
-  title?: string;
-  image?: string;
-  references?: Reference[];
-}
 
 interface ChatState {
   messages: Array<Message>;
-  addMessage: (role: "user" | "assistant", content: string) => void;
+  addMessage: (role: Role, content: string) => void;
   populateFromTile: (tile: Tile) => void;
 }
 
 export const useChatStore = create<ChatState>((set) => ({
   messages: [
     {
-      role: "assistant",
+      role: Role.ASSISTANT,
       content:
         "Hey there, great to meet you. I'm your personal AI. My goal is to be useful, friendly and fun. Ask me for advice, for answers, or let's talk about whatever's on your mind. How's your day going?",
     },
@@ -46,12 +25,13 @@ export const useChatStore = create<ChatState>((set) => ({
     set(() => {
       // Create a new message with the tile's content
       const newMessage: Message = {
-        role: "assistant",
+        role: Role.ASSISTANT,
         content: "", // Empty content as we'll use blocks instead
         title: tile.title,
         image: tile.image,
         blocks: tile.blocks,
         references: tile.references,
+        relatedTiles: tile.relatedTiles,
       };
 
       // Replace the messages with just this new message

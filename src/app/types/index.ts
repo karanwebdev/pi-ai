@@ -18,3 +18,19 @@ export interface Tile {
   references?: Reference[];
   relatedTiles?: string[];
 }
+
+export enum Role {
+  USER = "user",
+  ASSISTANT = "assistant",
+  SYSTEM = "system",
+}
+
+export interface Message {
+  role: Role;
+  content: string;
+  blocks?: Block[];
+  title?: string;
+  image?: string;
+  references?: Reference[];
+  relatedTiles?: string[];
+}

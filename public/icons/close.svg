@@ -1,0 +1,24 @@
+<svg
+    viewBox="0 0 14 14"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    className="h-[14px] w-[14px]"
+>
+    <rect
+    x="1.8291"
+    y="0.000244141"
+    width="17.216"
+    height="2.58239"
+    rx="1.2912"
+    transform="rotate(45 1.8291 0.000244141)"
+    fill="currentColor"
+    ></rect>
+    <rect
+    y="12.174"
+    width="17.216"
+    height="2.58239"
+    rx="1.2912"
+    transform="rotate(-45 0 12.174)"
+    fill="currentColor"
+    ></rect>
+</svg>

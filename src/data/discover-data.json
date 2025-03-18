@@ -1,0 +1,797 @@
+[
+  {
+    "id": "colors",
+    "title": "The psychology of colors",
+    "image": "/images/discover/1.webp",
+    "blocks": [
+      {
+        "type": "text",
+        "content": "Colors have a profound effect on our emotions and behaviors. Let's explore how different colors influence our psychology."
+      },
+      {
+        "type": "text",
+        "content": "Here's how various colors typically affect us:"
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "items": [
+          "Red: Stimulates energy, passion, and can increase heart rate",
+          "Blue: Creates feelings of calmness, trust, and serenity",
+          "Yellow: Evokes optimism, clarity, and warmth",
+          "Green: Represents balance, nature, and promotes relaxation",
+          "Purple: Associated with creativity, wisdom, and luxury"
+        ]
+      },
+      {
+        "type": "text",
+        "content": "How do different colors make you feel? Would you like to know more about a specific color?"
+      }
+    ],
+    "relatedTiles": ["dreams", "perspective", "manifest", "science"]
+  },
+  {
+    "id": "health-wellness",
+    "title": "Health and wellness trends of 2024",
+    "image": "/images/discover/4.webp",
+    "blocks": [],
+    "references": [],
+    "relatedTiles": ["gut-health", "sleep-environment", "insomnia", "energy"]
+  },
+  {
+    "id": "dreams",
+    "title": "The real meaning behind your dreams",
+    "image": "/images/discover/2.webp",
+    "blocks": [
+      {
+        "type": "text",
+        "content": "Dreams have fascinated humans for millennia. They can be mysterious, enlightening, or sometimes frightening."
+      },
+      {
+        "type": "text",
+        "content": "Common dream themes and their potential meanings:"
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "items": [
+          "Falling: Often related to feeling out of control in your waking life",
+          "Flying: May represent freedom or escaping limitations",
+          "Being chased: Could indicate avoiding a person or issue",
+          "Teeth falling out: Possibly connected to anxiety about appearance or communication",
+          "Being unprepared: Might reflect real-life insecurities or impostor syndrome"
+        ]
+      },
+      {
+        "type": "text",
+        "content": "What recurring dreams do you experience? I'd be happy to explore their potential meanings with you."
+      }
+    ],
+    "relatedTiles": ["colors", "perspective", "sleep-environment", "science"]
+  },
+  {
+    "id": "translate",
+    "title": "Let me translate something",
+    "image": "/images/discover/3.webp",
+    "blocks": [
+      {
+        "type": "text",
+        "content": "I can help translate text between many languages. Just tell me what you'd like translated and to which language."
+      },
+      {
+        "type": "text",
+        "content": "Some popular translation requests include:"
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "items": [
+          "Everyday phrases for travel",
+          "Love notes and romantic expressions",
+          "Business terminology",
+          "Cultural idioms and sayings",
+          "Academic content"
+        ]
+      },
+      {
+        "type": "text",
+        "content": "What would you like me to translate for you today?"
+      }
+    ],
+    "relatedTiles": ["language", "science", "learn-new", "fascinating-facts"]
+  },
+  {
+    "id": "learn-new",
+    "title": "Learn about something new",
+    "image": "/images/discover/5.webp",
+    "blocks": [
+      {
+        "type": "text",
+        "content": "Expanding your knowledge is one of life's greatest joys. What would you like to learn about today?"
+      },
+      {
+        "type": "text",
+        "content": "Some fascinating topics to explore:"
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "items": [
+          "Quantum physics and the nature of reality",
+          "Ancient civilizations and their technologies",
+          "Marine biology and deep ocean ecosystems",
+          "Artificial intelligence and machine learning",
+          "Psychology and human behavior"
+        ]
+      },
+      {
+        "type": "text",
+        "content": "Just let me know what sparks your curiosity, and we can dive into that subject together!"
+      }
+    ],
+    "relatedTiles": [
+      "science",
+      "tech-trends",
+      "fascinating-facts",
+      "explain-ai"
+    ]
+  },
+  {
+    "id": "brainstorm",
+    "title": "Brainstorm ideas",
+    "image": "/images/discover/6.webp",
+    "blocks": [
+      {
+        "type": "text",
+        "content": "Need help generating ideas? Let's brainstorm together to unlock your creativity."
+      },
+      {
+        "type": "text",
+        "content": "I can help you brainstorm for various purposes:"
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "items": [
+          "Business ventures and startup concepts",
+          "Creative writing plots and characters",
+          "Problem-solving approaches",
+          "Gift ideas for special occasions",
+          "Personal projects and hobbies"
+        ]
+      },
+      {
+        "type": "text",
+        "content": "What kind of ideas are you looking to generate today?"
+      }
+    ],
+    "relatedTiles": ["perspective", "manifest", "learn-new", "tech-trends"]
+  },
+  {
+    "id": "perspective",
+    "title": "Shift your perspective",
+    "image": "/images/discover/7.webp",
+    "blocks": [
+      {
+        "type": "text",
+        "content": "Sometimes looking at things differently can transform our understanding and experience of life."
+      },
+      {
+        "type": "text",
+        "content": "Ways to shift your perspective:"
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "items": [
+          "Practice cognitive reframing to see challenges as opportunities",
+          "Consider situations from others' points of view",
+          "Question your assumptions and biases",
+          "Seek out diverse opinions and experiences",
+          "Use 'what if' scenarios to explore alternative possibilities"
+        ]
+      },
+      {
+        "type": "text",
+        "content": "Is there a specific situation where you'd like to explore a different perspective?"
+      }
+    ],
+    "relatedTiles": [
+      "brainstorm",
+      "imposter-syndrome",
+      "criticism",
+      "ted-talks"
+    ]
+  },
+  {
+    "id": "riddles",
+    "title": "Can you answer these riddles?",
+    "image": "/images/discover/8.webp",
+    "blocks": [
+      {
+        "type": "text",
+        "content": "Riddles exercise your brain and encourage creative thinking. Let's see if you can solve these!"
+      },
+      {
+        "type": "list",
+        "ordered": true,
+        "items": [
+          "I speak without a mouth and hear without ears. I have no body, but I come alive with wind. What am I?",
+          "The more you take, the more you leave behind. What am I?",
+          "What has keys but no locks, space but no room, and you can enter but not go in?",
+          "What can travel around the world while staying in a corner?",
+          "What has a head, a tail, is brown, and has no legs?"
+        ]
+      },
+      {
+        "type": "text",
+        "content": "Would you like to try solving these riddles? Or would you prefer some different ones?"
+      }
+    ],
+    "relatedTiles": ["fascinating-facts", "learn-new", "perspective", "science"]
+  },
+  {
+    "id": "language",
+    "title": "Learn a new language with Pi",
+    "image": "/images/discover/9.webp",
+    "blocks": [
+      {
+        "type": "text",
+        "content": "Learning a new language opens doors to different cultures and ways of thinking."
+      },
+      {
+        "type": "text",
+        "content": "I can help you with various aspects of language learning:"
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "items": [
+          "Basic vocabulary and common phrases",
+          "Grammar explanations and practice",
+          "Pronunciation guidance",
+          "Cultural context and idioms",
+          "Conversation practice and feedback"
+        ]
+      },
+      {
+        "type": "text",
+        "content": "Which language would you like to start learning today?"
+      }
+    ],
+    "relatedTiles": ["translate", "learn-new", "fascinating-facts", "ted-talks"]
+  },
+  {
+    "id": "energy",
+    "title": "Have an energy boost on me",
+    "image": "/images/discover/10.webp",
+    "blocks": [
+      {
+        "type": "text",
+        "content": "Feeling tired or sluggish? Let's explore natural ways to boost your energy levels."
+      },
+      {
+        "type": "text",
+        "content": "Try these energy-boosting strategies:"
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "items": [
+          "Take a brisk 10-minute walk to increase circulation and oxygen flow",
+          "Stay hydrated - even mild dehydration can cause fatigue",
+          "Eat balanced meals with protein, complex carbs, and healthy fats",
+          "Practice deep breathing exercises for 5 minutes",
+          "Get exposure to natural light to regulate your circadian rhythm"
+        ]
+      },
+      {
+        "type": "text",
+        "content": "Would you like more specific energy-boosting tips for your situation?"
+      }
+    ],
+    "relatedTiles": [
+      "health-wellness",
+      "sleep-environment",
+      "insomnia",
+      "gut-health"
+    ]
+  },
+  {
+    "id": "attachment-style",
+    "title": "Learn your relationship attachment style",
+    "image": "/images/discover/11.webp",
+    "blocks": [
+      {
+        "type": "text",
+        "content": "Your attachment style influences how you connect with others in relationships."
+      },
+      {
+        "type": "text",
+        "content": "The four main attachment styles are:"
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "items": [
+          "Secure: Comfortable with intimacy and independence",
+          "Anxious: Seeks high levels of intimacy and approval",
+          "Avoidant: Values independence and self-sufficiency over intimacy",
+          "Fearful-Avoidant: Desires close relationships but struggles with trust"
+        ]
+      },
+      {
+        "type": "text",
+        "content": "Would you like to explore which attachment style might describe you? I can ask you some questions to help identify your pattern."
+      }
+    ],
+    "relatedTiles": [
+      "love-language",
+      "criticism",
+      "perspective",
+      "imposter-syndrome"
+    ]
+  },
+  {
+    "id": "sleep-environment",
+    "title": "Perfect your sleeping environment",
+    "image": "/images/discover/12.webp",
+    "blocks": [
+      {
+        "type": "text",
+        "content": "Your sleep environment plays a crucial role in the quality of your rest."
+      },
+      {
+        "type": "text",
+        "content": "Key elements of an ideal sleep environment:"
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "items": [
+          "Temperature: Keep your bedroom between 60-67°F (15-19°C)",
+          "Light: Use blackout curtains or an eye mask to block light",
+          "Sound: Consider white noise or earplugs to mask disruptive sounds",
+          "Bedding: Invest in a comfortable mattress and pillows that support your sleep position",
+          "Electronics: Remove or turn off devices that emit blue light and notifications"
+        ]
+      },
+      {
+        "type": "text",
+        "content": "Would you like specific recommendations for improving your sleep environment?"
+      }
+    ],
+    "relatedTiles": ["insomnia", "health-wellness", "energy", "gut-health"]
+  },
+  {
+    "id": "love-language",
+    "title": "Quiz: what's my love language?",
+    "image": "/images/discover/13.webp",
+    "blocks": [
+      {
+        "type": "text",
+        "content": "Understanding your love language can help improve your relationships by recognizing how you prefer to give and receive love."
+      },
+      {
+        "type": "text",
+        "content": "The five love languages are:"
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "items": [
+          "Words of Affirmation: Verbal expressions of love and appreciation",
+          "Acts of Service: Doing helpful things for your partner",
+          "Receiving Gifts: Meaningful tokens that show you were thinking of them",
+          "Quality Time: Giving undivided attention and shared experiences",
+          "Physical Touch: Physical closeness and affection"
+        ]
+      },
+      {
+        "type": "text",
+        "content": "Would you like to take a quick quiz to discover your primary love language?"
+      }
+    ],
+    "relatedTiles": ["attachment-style", "perspective", "criticism", "manifest"]
+  },
+  {
+    "id": "criticism",
+    "title": "How to deal with criticism",
+    "image": "/images/discover/14.webp",
+    "blocks": [
+      {
+        "type": "text",
+        "content": "Criticism, while sometimes difficult to hear, can be a valuable opportunity for growth when handled constructively."
+      },
+      {
+        "type": "text",
+        "content": "Healthy ways to respond to criticism:"
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "items": [
+          "Listen fully before responding",
+          "Separate the feedback from your self-worth",
+          "Look for the kernel of truth, even in poorly delivered criticism",
+          "Ask clarifying questions to understand the perspective better",
+          "Thank the person for their input, even if you disagree"
+        ]
+      },
+      {
+        "type": "text",
+        "content": "Is there a specific situation involving criticism that you'd like to discuss?"
+      }
+    ],
+    "relatedTiles": [
+      "difficult-feedback",
+      "imposter-syndrome",
+      "perspective",
+      "attachment-style"
+    ]
+  },
+  {
+    "id": "inbox-zero",
+    "title": "Get to inbox zero",
+    "image": "/images/discover/15.webp",
+    "blocks": [
+      {
+        "type": "text",
+        "content": "An overflowing inbox can be a major source of stress and reduced productivity."
+      },
+      {
+        "type": "text",
+        "content": "Steps to achieve inbox zero:"
+      },
+      {
+        "type": "list",
+        "ordered": true,
+        "items": [
+          "Set aside dedicated time for email processing",
+          "Use the 4D method: Delete, Delegate, Defer, or Do",
+          "Create folders or labels for organizing emails by project or priority",
+          "Unsubscribe from newsletters you no longer read",
+          "Set up filters to automatically sort incoming mail"
+        ]
+      },
+      {
+        "type": "text",
+        "content": "Would you like more specific strategies for managing your email more efficiently?"
+      }
+    ],
+    "relatedTiles": [
+      "tech-trends",
+      "brainstorm",
+      "perspective",
+      "difficult-feedback"
+    ]
+  },
+  {
+    "id": "ted-talks",
+    "title": "Inspiring TED talks for you",
+    "image": "/images/discover/16.webp",
+    "blocks": [
+      {
+        "type": "text",
+        "content": "TED talks offer condensed wisdom and innovative ideas from some of the world's most inspiring thinkers."
+      },
+      {
+        "type": "text",
+        "content": "Here are some thought-provoking TED talks worth watching:"
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "items": [
+          "Brené Brown: The Power of Vulnerability",
+          "Simon Sinek: How Great Leaders Inspire Action",
+          "Amy Cuddy: Your Body Language May Shape Who You Are",
+          "Sir Ken Robinson: Do Schools Kill Creativity?",
+          "Chimamanda Ngozi Adichie: The Danger of a Single Story"
+        ]
+      },
+      {
+        "type": "text",
+        "content": "Would you like recommendations for TED talks on a specific topic that interests you?"
+      }
+    ],
+    "relatedTiles": ["perspective", "science", "learn-new", "brainstorm"]
+  },
+  {
+    "id": "explain-ai",
+    "title": "Explain generative AI like I'm 5",
+    "image": "/images/discover/17.webp",
+    "blocks": [
+      {
+        "type": "text",
+        "content": "Generative AI can seem complicated, but we can break it down into simple concepts."
+      },
+      {
+        "type": "text",
+        "content": "Imagine you have a super-smart friend who has read almost every book in the world. This friend is really good at playing a guessing game where they try to finish your sentences."
+      },
+      {
+        "type": "text",
+        "content": "When you ask this friend a question or tell them to write a story, they think: 'Based on all the books I've read, what words usually come next after these words?'"
+      },
+      {
+        "type": "text",
+        "content": "They keep guessing the next word, again and again, until they've created a whole answer or story for you. Sometimes their guesses are really good and helpful, and sometimes they make mistakes."
+      },
+      {
+        "type": "text",
+        "content": "That's basically how generative AI works - it's learned patterns from lots of information and uses those patterns to create new things!"
+      }
+    ],
+    "relatedTiles": ["tech-trends", "science", "learn-new", "fascinating-facts"]
+  },
+  {
+    "id": "manifest",
+    "title": "Manifest your deepest desires",
+    "image": "/images/discover/18.webp",
+    "blocks": [
+      {
+        "type": "text",
+        "content": "Manifestation combines intention, belief, and action to help bring your desires into reality."
+      },
+      {
+        "type": "text",
+        "content": "Key principles of manifestation:"
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "items": [
+          "Clarity: Be specific about what you want to manifest",
+          "Visualization: Regularly imagine having already achieved your desire",
+          "Affirmations: Use positive statements to reinforce your intentions",
+          "Gratitude: Appreciate what you already have to attract more positivity",
+          "Inspired action: Take concrete steps toward your goals"
+        ]
+      },
+      {
+        "type": "text",
+        "content": "What would you like to manifest in your life? I can help you create a personalized manifestation practice."
+      }
+    ],
+    "relatedTiles": ["perspective", "brainstorm", "ted-talks", "energy"]
+  },
+  {
+    "id": "imposter-syndrome",
+    "title": "Don't let imposter syndrome get the best of you",
+    "image": "/images/discover/19.webp",
+    "blocks": [
+      {
+        "type": "text",
+        "content": "Imposter syndrome is that persistent feeling that you're not as competent as others perceive you to be, despite evidence of your accomplishments."
+      },
+      {
+        "type": "text",
+        "content": "Strategies to overcome imposter syndrome:"
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "items": [
+          "Acknowledge your feelings rather than suppressing them",
+          "Document your achievements and review them when doubt creeps in",
+          "Reframe failure as a necessary part of growth and learning",
+          "Share your feelings with trusted friends or mentors",
+          "Focus on the value you provide rather than on being perfect"
+        ]
+      },
+      {
+        "type": "text",
+        "content": "Would you like to discuss specific situations where you experience imposter syndrome?"
+      }
+    ],
+    "relatedTiles": [
+      "criticism",
+      "difficult-feedback",
+      "perspective",
+      "ted-talks"
+    ]
+  },
+  {
+    "id": "science",
+    "title": "Let's talk science",
+    "image": "/images/discover/20.webp",
+    "blocks": [
+      {
+        "type": "text",
+        "content": "Science helps us understand the world around us through observation, experimentation, and evidence-based reasoning."
+      },
+      {
+        "type": "text",
+        "content": "Fascinating areas of scientific research today include:"
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "items": [
+          "CRISPR gene editing and its potential to treat genetic diseases",
+          "Quantum computing and its implications for solving complex problems",
+          "Neuroscience and our growing understanding of consciousness",
+          "Climate science and sustainable technologies",
+          "Exoplanet discovery and the search for extraterrestrial life"
+        ]
+      },
+      {
+        "type": "text",
+        "content": "What area of science interests you most? I'd be happy to explore any scientific topic with you."
+      }
+    ],
+    "relatedTiles": [
+      "tech-trends",
+      "fascinating-facts",
+      "learn-new",
+      "explain-ai"
+    ]
+  },
+  {
+    "id": "insomnia",
+    "title": "Stop insomnia in its tracks",
+    "image": "/images/discover/21.webp",
+    "blocks": [
+      {
+        "type": "text",
+        "content": "Insomnia can significantly impact your quality of life, but there are effective strategies to improve your sleep."
+      },
+      {
+        "type": "text",
+        "content": "Evidence-based approaches to combat insomnia:"
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "items": [
+          "Maintain a consistent sleep schedule, even on weekends",
+          "Create a relaxing pre-sleep routine to signal your body it's time to wind down",
+          "Limit screen time at least 1 hour before bed",
+          "Practice relaxation techniques like deep breathing or progressive muscle relaxation",
+          "Consider cognitive behavioral therapy for insomnia (CBT-I), which has shown excellent results"
+        ]
+      },
+      {
+        "type": "text",
+        "content": "Would you like to discuss your specific sleep challenges to find targeted solutions?"
+      }
+    ],
+    "relatedTiles": [
+      "sleep-environment",
+      "health-wellness",
+      "energy",
+      "perspective"
+    ]
+  },
+  {
+    "id": "difficult-feedback",
+    "title": "Top tips for giving difficult feedback",
+    "image": "/images/discover/22.webp",
+    "blocks": [
+      {
+        "type": "text",
+        "content": "Giving constructive feedback is a skill that can strengthen relationships and improve outcomes when done effectively."
+      },
+      {
+        "type": "text",
+        "content": "Best practices for delivering difficult feedback:"
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "items": [
+          "Choose the right time and private setting",
+          "Use the 'sandwich method': positive comment, constructive feedback, positive comment",
+          "Focus on specific behaviors rather than personality traits",
+          "Use 'I' statements to express how their actions affected you",
+          "Offer suggestions for improvement and express confidence in their ability"
+        ]
+      },
+      {
+        "type": "text",
+        "content": "Is there a specific feedback situation you're preparing for? I can help you plan your approach."
+      }
+    ],
+    "relatedTiles": [
+      "criticism",
+      "perspective",
+      "attachment-style",
+      "imposter-syndrome"
+    ]
+  },
+  {
+    "id": "fascinating-facts",
+    "title": "Five fascinating facts...",
+    "image": "/images/discover/23.webp",
+    "blocks": [
+      {
+        "type": "text",
+        "content": "The world is full of amazing and surprising information. Here are some fascinating facts that might blow your mind:"
+      },
+      {
+        "type": "list",
+        "ordered": true,
+        "items": [
+          "Octopuses have three hearts, blue blood, and nine brains (one central brain and eight mini-brains, one in each arm)",
+          "A day on Venus is longer than a year on Venus (it takes 243 Earth days to rotate once on its axis but only 225 Earth days to orbit the Sun)",
+          "The human body contains enough carbon to make about 900 pencils",
+          "Honey never spoils - archaeologists have found pots of honey in ancient Egyptian tombs that are over 3,000 years old and still perfectly good to eat",
+          "A group of flamingos is called a 'flamboyance'"
+        ]
+      },
+      {
+        "type": "text",
+        "content": "Would you like to hear more fascinating facts about a particular subject?"
+      }
+    ],
+    "relatedTiles": ["science", "learn-new", "riddles", "ted-talks"]
+  },
+  {
+    "id": "tech-trends",
+    "title": "The latest trends in tech",
+    "image": "/images/discover/24.webp",
+    "blocks": [
+      {
+        "type": "text",
+        "content": "Technology continues to evolve at a rapid pace, reshaping how we live, work, and interact."
+      },
+      {
+        "type": "text",
+        "content": "Current significant technology trends include:"
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "items": [
+          "Generative AI applications across industries from healthcare to creative fields",
+          "Extended reality (XR) combining virtual and augmented reality for immersive experiences",
+          "Edge computing bringing processing power closer to data sources for faster response times",
+          "Sustainable tech focusing on reducing environmental impact and energy consumption",
+          "Quantum computing beginning to solve previously intractable problems"
+        ]
+      },
+      {
+        "type": "text",
+        "content": "Which technology trend are you most curious about? I can provide more detailed information on any of these areas."
+      }
+    ],
+    "relatedTiles": ["explain-ai", "science", "learn-new", "fascinating-facts"]
+  },
+  {
+    "id": "gut-health",
+    "title": "Improve your gut health",
+    "image": "/images/discover/25.webp",
+    "blocks": [
+      {
+        "type": "text",
+        "content": "Your gut microbiome plays a crucial role in overall health, affecting everything from digestion to immunity and even mood."
+      },
+      {
+        "type": "text",
+        "content": "Ways to support a healthy gut:"
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "items": [
+          "Eat a diverse diet rich in fiber from fruits, vegetables, legumes, and whole grains",
+          "Include fermented foods like yogurt, kefir, sauerkraut, and kimchi",
+          "Stay hydrated to support the mucosal lining of the intestines",
+          "Manage stress through mindfulness, adequate sleep, and regular exercise",
+          "Limit processed foods, artificial sweeteners, and excessive alcohol"
+        ]
+      },
+      {
+        "type": "text",
+        "content": "Would you like personalized suggestions for improving your gut health based on your current diet and lifestyle?"
+      }
+    ],
+    "relatedTiles": [
+      "health-wellness",
+      "energy",
+      "sleep-environment",
+      "insomnia"
+    ]
+  }
+]

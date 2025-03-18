@@ -1,4 +1,4 @@
-import { Tile } from "@/app/types/tile";
+import { Tile } from "@/app/types";
 import { useChatStore } from "@/store/chat-store";
 import Image from "next/image";
 import React from "react";
@@ -8,7 +8,7 @@ const MasonryLayout: React.FC<{ tiles: Tile[] }> = ({ tiles }) => {
 
   return (
     <div
-      className="grid grid-cols-2 gap-4 sm:grid-cols-4 lg:grid-cols-2"
+      className="grid grid-cols-2 gap-4 sm:grid-cols-4 lg:grid-cols-2 px-6 "
       style={{ gridAutoRows: "minmax(160px, auto)" }}
     >
       {tiles.map((tile: Tile, index: number) => {
