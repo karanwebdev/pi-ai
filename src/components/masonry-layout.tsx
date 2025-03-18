@@ -3,10 +3,20 @@
 import { Tile } from "@/types";
 import { useChatStore } from "@/store/chat-store";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import React from "react";
 
 const MasonryLayout: React.FC<{ tiles: Tile[] }> = ({ tiles }) => {
   const populateFromTile = useChatStore((state) => state.populateFromTile);
+  const router = useRouter();
+  const [isMobile, setIsMobile] = React.useState(false);
+
+  React.useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 1024);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   return (
     <div
@@ -40,6 +50,10 @@ const MasonryLayout: React.FC<{ tiles: Tile[] }> = ({ tiles }) => {
         const handleTileClick = () => {
           if (tile.blocks && tile.blocks.length > 0) {
             populateFromTile(tile);
+            // Navigate to talk page on mobile
+            if (isMobile) {
+              router.push('/talk');
+            }
           }
         };
 

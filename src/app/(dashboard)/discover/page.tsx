@@ -1,5 +1,5 @@
 import ChatInterface from "@/components/chat-interface";
 
 export default function DiscoverPage() {
-  return <ChatInterface />;
+  return <div className="hidden lg:flex w-full"><ChatInterface /></div>;
 }

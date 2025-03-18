@@ -7,8 +7,9 @@ export default function DiscoverSection() {
   return (
     <div className="h-full overflow-y-auto no-scrollbar bg-neutral-100 lg:pt-8">
       <div className="bg-card-background">
-        <div className="flex items-center bg-neutral-100 py-5 rounded-t-4xl md:mt-0 md:rounded-none px-4 lg:px-6 lg:hidden">
-          <button
+        <div className="flex items-center bg-neutral-100 py-5 mt-[12px]rounded-t-4xl md:mt-0 md:rounded-none px-4 lg:px-6 lg:hidden">
+          <Link
+            href="/talk"
             aria-label="Go back"
             className="flex h-9 w-9 items-center justify-center rounded-full p-1.5 text-primary-700 bg-neutral-300 hover:bg-neutral-300-hover active:bg-neutral-300-tap lg:hidden"
             type="button"
@@ -19,10 +20,10 @@ export default function DiscoverSection() {
               height={14}
               alt="Close Icon"
             />
-          </button>
+          </Link>
           <div className="grow text-primary-700"></div>
           <Link
-            href="/profile/manage-history"
+            href="/profile"
             aria-label="Go to profile"
             className="flex h-9 w-9 items-center justify-center rounded-full p-1.5 text-primary-700 bg-neutral-300 hover:bg-neutral-300-hover active:bg-neutral-300-tap lg:hidden"
           >

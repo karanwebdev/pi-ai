@@ -5,6 +5,8 @@ import type React from "react";
 import { useChatStore } from "@/store/chat-store";
 import ChatInput from "./chat-input";
 import ChatMessage from "./chat-message";
+import Image from "next/image";
+import Link from "next/link";
 // import { Button } from "./ui/button";
 // import { ChevronDown, Volume2 } from "lucide-react";
 
@@ -12,8 +14,36 @@ export default function ChatInterface() {
   const { messages } = useChatStore();
 
   return (
-    <div className="relative grow overflow-x-auto hidden lg:flex lg:flex-col">
-      <div className="relative flex flex-col overflow-hidden sm:overflow-x-visible h-full pt-8 grow">
+    <div className="relative grow overflow-x-auto flex flex-col">
+      <div className="relative flex flex-col overflow-hidden sm:overflow-x-visible h-full pt-4 lg:pt-8 grow">
+      <div className="flex items-center bg-neutral-50 py-5 mt-[12px]rounded-t-4xl md:mt-0 md:rounded-none px-4 lg:px-6 lg:hidden">
+          <Link
+            href="/discover"
+            aria-label="Go back"
+            className="flex h-9 w-9 items-center justify-center rounded-full p-1.5 text-primary-700 bg-neutral-300 hover:bg-neutral-300-hover active:bg-neutral-300-tap lg:hidden cursor-pointer"
+            type="button"
+          >
+            <Image
+              src={"/icons/magic.svg"}
+              width={32}
+              height={32}
+              alt="Discover Icon"
+            />
+          </Link>
+          <div className="grow text-primary-700"></div>
+          <Link
+            href="/threads"
+            aria-label="Go to threads"
+            className="flex h-9 w-9 items-center justify-center rounded-full p-1.5 text-primary-700 bg-neutral-300 hover:bg-neutral-300-hover active:bg-neutral-300-tap lg:hidden"
+          >
+            <Image
+              src={"/icons/threads.svg"}
+              width={24}
+              height={24}
+              alt="Threads Icon"
+            />
+          </Link>
+        </div>
         <div className="relative w-full mx-auto max-w-1.5xl 2xl:max-w-[47rem]">
           <div className="absolute w-full bg-gradient-to-b from-neutral-50 to-transparent lg:h-[50px] lg:bg-gradient-to-b lg:from-neutral-50 lg:to-transparent z-10 h-[70px] via-neutral-50"></div>
         </div>
